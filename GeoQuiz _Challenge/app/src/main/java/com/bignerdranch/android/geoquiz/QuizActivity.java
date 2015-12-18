@@ -13,6 +13,7 @@ public class QuizActivity extends AppCompatActivity {
     private Button mFalseButton;
     private TextView mQuestionTextView;
     private Button mNextButton;
+    private Button mPreviousButton;
 
     private Question[] mQuestionBank = new Question[] {
             new Question(R.string.question_oceans, true),
@@ -58,6 +59,16 @@ public class QuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 mCurrentIndex++;
+                setQuestionText(mCurrentIndex);
+            }
+        });
+
+        //Go to the previous question when the previous Button is clicked - Challenge
+        mPreviousButton = (Button) findViewById(R.id.previous_button);
+        mPreviousButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCurrentIndex--;
                 setQuestionText(mCurrentIndex);
             }
         });
