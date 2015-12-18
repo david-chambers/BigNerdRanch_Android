@@ -61,6 +61,16 @@ public class QuizActivity extends AppCompatActivity {
                 setQuestionText(mCurrentIndex);
             }
         });
+
+        //Go to the next question when the TextView is clicked - Challenge
+        mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
+        mQuestionTextView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                mCurrentIndex++;
+                setQuestionText(mCurrentIndex);
+            }
+        });
         //Set initial question text
         setQuestionText(mCurrentIndex);
     }
