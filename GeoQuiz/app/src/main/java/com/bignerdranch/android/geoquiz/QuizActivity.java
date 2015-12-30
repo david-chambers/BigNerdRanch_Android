@@ -113,6 +113,7 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void setQuestionText(int currentIndex){
+
         mCurrentIndex = currentIndex % mQuestionBank.length;
         int question = mQuestionBank[mCurrentIndex].getTextResId();
         mQuestionTextView.setText(question);

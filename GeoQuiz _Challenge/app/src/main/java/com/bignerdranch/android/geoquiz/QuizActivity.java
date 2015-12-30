@@ -1,8 +1,10 @@
 package com.bignerdranch.android.geoquiz;
 
 import android.media.Image;
+import android.nfc.Tag;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -60,7 +62,7 @@ public class QuizActivity extends AppCompatActivity {
         mNextButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                mCurrentIndex++;
+                //mCurrentIndex++;
                 setQuestionText(mCurrentIndex);
             }
         });
@@ -89,6 +91,8 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void setQuestionText(int currentIndex){
+        Log.d(TAG,)
+        Log.d(TAG, "Updating question text for question #" + mCurrentIndex, new Exception());
         mCurrentIndex = currentIndex % mQuestionBank.length;
         int question = mQuestionBank[mCurrentIndex].getTextResId();
         mQuestionTextView.setText(question);
