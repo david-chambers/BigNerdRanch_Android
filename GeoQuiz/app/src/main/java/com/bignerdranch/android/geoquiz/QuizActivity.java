@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Arrays;
+
 public class QuizActivity extends AppCompatActivity {
 
     private Button mTrueButton;
@@ -39,6 +41,8 @@ public class QuizActivity extends AppCompatActivity {
 
     };
 
+    //Create a boolen array that represents if the user cheated last time on X question
+    private boolean[] array = new boolean[5];
     private int mCurrentIndex = 0;
 
     //Boolean for is the user cheated - coming from CheatActivity
@@ -86,6 +90,7 @@ public class QuizActivity extends AppCompatActivity {
         mNextButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+
                 mCurrentIndex++;
                 mIsCheater = false;
                 setQuestionText(mCurrentIndex);

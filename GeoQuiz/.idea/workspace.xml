@@ -51,8 +51,8 @@
             <file leaf-file-name="CheatActivity.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/geoquiz/CheatActivity.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.8656885">
-                    <caret line="94" column="47" selection-start-line="94" selection-start-column="38" selection-end-line="94" selection-end-column="47" />
+                  <state vertical-scroll-proportion="0.3860045">
+                    <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
                     <folding />
                   </state>
                 </provider>
@@ -81,14 +81,14 @@
       <file leaf-file-name="QuizActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/geoquiz/QuizActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5774379">
-              <caret line="55" column="64" selection-start-line="55" selection-start-column="64" selection-end-line="55" selection-end-column="64" />
+            <state vertical-scroll-proportion="-0.332696">
+              <caret line="94" column="35" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
               <folding>
-                <element signature="e#3465#3849#0" expanded="true" />
-                <element signature="e#3848#3849#0" expanded="true" />
+                <element signature="e#3626#4010#0" expanded="true" />
+                <element signature="e#4009#4010#0" expanded="true" />
                 <element signature="method#setQuestionText#0;class#QuizActivity#0" expanded="false" />
-                <element signature="e#5640#5664#0" expanded="true" />
-                <element signature="e#5767#5789#0" expanded="true" />
+                <element signature="e#5801#5825#0" expanded="true" />
+                <element signature="e#5928#5950#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2039,7 +2039,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38297874" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38297874" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2094,11 +2094,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="95" column="40" selection-start-line="95" selection-start-column="40" selection-end-line="95" selection-end-column="40" />
           <folding>
-            <element signature="e#3465#3849#0" expanded="true" />
-            <element signature="e#3848#3849#0" expanded="true" />
+            <element signature="e#3626#4010#0" expanded="true" />
+            <element signature="e#4009#4010#0" expanded="true" />
             <element signature="method#setQuestionText#0;class#QuizActivity#0" expanded="false" />
-            <element signature="e#5640#5664#0" expanded="true" />
-            <element signature="e#5767#5789#0" expanded="true" />
+            <element signature="e#5801#5825#0" expanded="true" />
+            <element signature="e#5928#5950#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2137,11 +2137,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#3465#3849#0" expanded="true" />
-            <element signature="e#3848#3849#0" expanded="true" />
+            <element signature="e#3626#4010#0" expanded="true" />
+            <element signature="e#4009#4010#0" expanded="true" />
             <element signature="method#setQuestionText#0;class#QuizActivity#0" expanded="false" />
-            <element signature="e#5640#5664#0" expanded="true" />
-            <element signature="e#5767#5789#0" expanded="true" />
+            <element signature="e#5801#5825#0" expanded="true" />
+            <element signature="e#5928#5950#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2212,22 +2212,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/geoquiz/CheatActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8656885">
-          <caret line="94" column="47" selection-start-line="94" selection-start-column="38" selection-end-line="94" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.3860045">
+          <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/geoquiz/QuizActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5774379">
-          <caret line="55" column="64" selection-start-line="55" selection-start-column="64" selection-end-line="55" selection-end-column="64" />
+        <state vertical-scroll-proportion="-0.332696">
+          <caret line="94" column="35" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
           <folding>
-            <element signature="e#3465#3849#0" expanded="true" />
-            <element signature="e#3848#3849#0" expanded="true" />
+            <element signature="e#3626#4010#0" expanded="true" />
+            <element signature="e#4009#4010#0" expanded="true" />
             <element signature="method#setQuestionText#0;class#QuizActivity#0" expanded="false" />
-            <element signature="e#5640#5664#0" expanded="true" />
-            <element signature="e#5767#5789#0" expanded="true" />
+            <element signature="e#5801#5825#0" expanded="true" />
+            <element signature="e#5928#5950#0" expanded="true" />
           </folding>
         </state>
       </provider>
