@@ -18,7 +18,7 @@
 
         <activity android:name=".CheatActivity" >
         </activity>
-        
+
     </application>
 
 </manifest>
