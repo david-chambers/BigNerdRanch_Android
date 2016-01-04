@@ -32,6 +32,8 @@ public class CheatActivity extends AppCompatActivity {
     //Key value pair for index of question bank
     private static final String KEY_INDEX ="index";
 
+
+
     //Encapsulate of what CheatActivity expects as extras on its Intent
     public static Intent newIntent(Context packageContext, boolean answerIsTrue){
         Intent i = new Intent(packageContext,CheatActivity.class);

@@ -24,6 +24,9 @@ public class QuizActivity extends AppCompatActivity {
     //Key value pair for index of question bank
     private static final String KEY_INDEX ="index";
 
+    //Key value pair for mIsCheater
+    private static final String KEY_INDEX2="is_cheater";
+
     //request code for calling CheatActivity
     private static final int REQUEST_CODE_CHEAT = 0;
 
@@ -49,7 +52,9 @@ public class QuizActivity extends AppCompatActivity {
         if (savedInstanceState != null) {
             Log.d(TAG, "current index: " + mCurrentIndex);
             mCurrentIndex = savedInstanceState.getInt(KEY_INDEX, 0);
+            mIsCheater = savedInstanceState.getBoolean(KEY_INDEX2, false);
             Log.d(TAG, "current index after: " + mCurrentIndex);
+            Log.d(TAG, "current cheater status after: " + mIsCheater);
         }
         Log.d(TAG, "onCreate(Bundle) called");
         setContentView(R.layout.activity_quiz);
@@ -143,6 +148,7 @@ public class QuizActivity extends AppCompatActivity {
         super.onSaveInstanceState(savedInstanceState);
         //Log.i(TAG, "onSaveInstanceState");
         savedInstanceState.putInt(KEY_INDEX, mCurrentIndex);
+        savedInstanceState.putBoolean(KEY_INDEX2,mIsCheater);
     }
 
     private void setQuestionText(int currentIndex){
