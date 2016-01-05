@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class QuizActivity extends AppCompatActivity {
@@ -168,8 +169,15 @@ public class QuizActivity extends AppCompatActivity {
 
         int messageResId = 0;
 
-        if(mIsCheater){
+        if(mIsCheater || array[mCurrentIndex] == true){
+            Log.d(TAG,"current index: " + mCurrentIndex);
             messageResId = R.string.judgement_toast;
+
+            //set boolean array to true - they cheated
+            array[mCurrentIndex] = true;
+
+            //print
+            Log.d(TAG, Arrays.toString(array));
         } else {
 
 
