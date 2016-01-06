@@ -1,13 +1,19 @@
 package com.bignerdranch.android.geoquiz;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewAnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class CheatActivity extends AppCompatActivity {
 
@@ -25,6 +31,8 @@ public class CheatActivity extends AppCompatActivity {
 
     private TextView mAnswerTextView;
     private Button mShowAnswer;
+
+    private TextView mBuildNumberTextView;
 
     //Tag for logging
     private static final String TAG = "CheatActivity";
@@ -69,8 +77,38 @@ public class CheatActivity extends AppCompatActivity {
                 }
 
                 setAnswerShowResult(didUserCheat);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+
+
+                    int cx = mShowAnswer.getWidth() / 2;
+                    int cy = mShowAnswer.getHeight() / 2;
+                    float radius = mShowAnswer.getWidth();
+                    Animator anim = ViewAnimationUtils
+                            .createCircularReveal(mShowAnswer, cx, cy, radius, 0);
+                    anim.addListener(new AnimatorListenerAdapter() {
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            super.onAnimationEnd(animation);
+                            mAnswerTextView.setVisibility(View.VISIBLE);
+                            mShowAnswer.setVisibility(View.INVISIBLE);
+                        }
+                    });
+                    anim.start();
+                } else {
+                    mAnswerTextView.setVisibility(View.VISIBLE);
+                    mShowAnswer.setVisibility(View.INVISIBLE);
+                }
             }
         });
+
+        //Show build number in cheat activity in a TextView
+        mBuildNumberTextView = (TextView) findViewById(R.id.showBuildNumber);
+
+        //get the device build number
+        //int theBuild = Build.VERSION.SDK_INT;
+
+        //string myBuildStr = toString(theBuild);
+        mBuildNumberTextView.setText("API level " + String.valueOf(Build.VERSION.SDK_INT));
 
         //call setAnswerShowResult (rotation bug may not have gone back in to on click)
         setAnswerShowResult(didUserCheat);
