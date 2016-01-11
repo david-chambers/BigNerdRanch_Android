@@ -53,7 +53,7 @@ public class Crime {
 
     //format the date as Monday, May 1, 2015
     public String SetFormatDate(Date date) {
-        //TODO: return the date in a better format (Monday, June 1, 2015)
+        //TODO: return the date in a better format (Monday, June 1, 2015)d
         java.text.DateFormat dateFormat = java.text.DateFormat.getDateInstance(java.text.DateFormat.FULL);
         return dateFormat.format(date);
     }
