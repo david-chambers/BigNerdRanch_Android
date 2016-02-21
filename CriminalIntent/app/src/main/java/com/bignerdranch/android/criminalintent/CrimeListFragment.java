@@ -1,9 +1,11 @@
 package com.bignerdranch.android.criminalintent;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +22,11 @@ import java.util.List;
  */
 public class CrimeListFragment extends Fragment {
 
+    //Tag for logging
+    public String TAG = "myTag";
+
+    //Keeping track of position clicked
+    public int position;
     private RecyclerView mCrimeRecyclerView;
     private CrimeAdapter mAdapter;
     @Override
@@ -35,9 +42,28 @@ public class CrimeListFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onResume(){
+        super.onResume();
+        updateUI();
+    }
+
     public void updateUI(){
+        Log.d(TAG, "Position: (updateUI) " + position);
         CrimeLab crimeLab = CrimeLab.get(getActivity());
         List<Crime> crimes = crimeLab.getmCrimes();
+
+
+        if (mAdapter == null){
+            mAdapter = new CrimeAdapter(crimes);
+            mCrimeRecyclerView.setAdapter(mAdapter);
+        } else{
+           //Old method, not efficient
+            //mAdapter.notifyDataSetChanged();
+
+            //New method, only update that one position
+            mAdapter.notifyItemChanged(position);
+        }
 
         mAdapter = new CrimeAdapter(crimes);
         mCrimeRecyclerView.setAdapter(mAdapter);
@@ -67,7 +93,12 @@ public class CrimeListFragment extends Fragment {
 
         @Override
         public void onClick(View v){
-            Toast.makeText(getActivity(), mCrime.getmTitle() + " clicked!",Toast.LENGTH_SHORT).show();
+            Intent intent = CrimeActivity.newIntent(getActivity(), mCrime.getmId());
+            startActivity(intent);
+
+            position = getAdapterPosition();
+
+            Log.d(TAG, "Position (onclick): " + position);
 
         }
 
